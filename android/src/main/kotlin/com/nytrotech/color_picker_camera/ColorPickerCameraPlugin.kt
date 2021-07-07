@@ -77,7 +77,6 @@ class ColorPickerCameraPlugin: FlutterPlugin, MethodCallHandler , ActivityAware,
 
   override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?): Boolean {
     if (resultCode === Activity.RESULT_OK) {
-      Toast.makeText(context, "helo custom click from result", Toast.LENGTH_LONG).show()
 
       Log.i("ActivityResult", "onActivity REsult")
 
@@ -85,9 +84,10 @@ class ColorPickerCameraPlugin: FlutterPlugin, MethodCallHandler , ActivityAware,
       var image = data?.getStringExtra("image")
       var color = data?.getStringExtra("colorCode")
 
+      var myColor=color?.replace("#","0xff")
 
 
-      pendingResult!!.success(color)
+      pendingResult!!.success(myColor)
       return true
     }
     return false

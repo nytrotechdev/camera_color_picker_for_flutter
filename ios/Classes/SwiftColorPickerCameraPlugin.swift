@@ -3,7 +3,7 @@ import UIKit
 
 public class SwiftColorPickerCameraPlugin: NSObject, FlutterPlugin, CameraScreenDelegate {
     
-    var barcode: String = ""
+    var colorCode: String = ""
 
      private var pendingResult: FlutterResult?
      private var hostViewController: UIViewController?
@@ -52,8 +52,9 @@ public class SwiftColorPickerCameraPlugin: NSObject, FlutterPlugin, CameraScreen
 
     func didReturnData(data: String) {
 
-      barcode=data
-      pendingResult?(data)
+      colorCode="0xff"+data
+
+      pendingResult?(colorCode)
 
 
 
