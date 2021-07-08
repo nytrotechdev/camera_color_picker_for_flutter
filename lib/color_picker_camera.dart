@@ -11,7 +11,7 @@ class ColorPickerCamera {
     return version;
   }
 
-  static Future<String> captureColorFromCamera() async {
+  static Future<String> get captureColorFromCamera async {
     try {
       var result = await _channel.invokeMethod('startNewActivity');
       return result;

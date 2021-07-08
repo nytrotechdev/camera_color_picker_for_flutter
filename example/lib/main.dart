@@ -55,12 +55,12 @@ class _MyAppState extends State<MyApp> {
               ),
               RaisedButton(
                 color: Colors.red,
-                onPressed: () {
-                  ColorPickerCamera.captureColorFromCamera().then((value) {
-                    setState(() {
-                      selectedColor = value;
-                      bgColor = Color(int.parse(value));
-                    });
+                onPressed: () async {
+                  String colorCode =
+                      await ColorPickerCamera.captureColorFromCamera;
+                  setState(() {
+                    selectedColor = colorCode;
+                    bgColor = Color(int.parse(colorCode));
                   });
                 },
                 child: Text("Go To Camera"),

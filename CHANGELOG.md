@@ -1,3 +1,3 @@
-## 0.0.1
+# 0.0.1
 
-* TODO: Describe initial release.
+* Now you can get color code with just a camera click

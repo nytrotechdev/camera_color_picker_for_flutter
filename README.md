@@ -1,15 +1,12 @@
 # color_picker_camera
 
-A new Flutter plugin.
+A flutter plugin to detect colors using camera and provides its code to you.
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+Add color_picker_camera as a dependency in your pubspec.yaml file
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Usage
 
+import 'package:color_picker_camera/color_picker_camera.dart';
+String colorCode = await ColorPickerCamera.captureColorFromCamera;
