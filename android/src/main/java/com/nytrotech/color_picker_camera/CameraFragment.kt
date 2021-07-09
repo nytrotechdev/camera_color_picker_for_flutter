@@ -205,11 +205,11 @@ class CameraFragment : Fragment() {
             showInstructionsDialog()
         }
 
-        val sp = requireActivity().getSharedPreferences("MY PRIVATE PLUGIN", Context.MODE_PRIVATE)
-        if (!sp.getBoolean("isInstructionShown", false)) {
-            showInstructionsDialog()
-            sp.edit().putBoolean("isInstructionShown", true).commit()
-        }
+//        val sp = requireActivity().getSharedPreferences("MY PRIVATE PLUGIN", Context.MODE_PRIVATE)
+//        if (!sp.getBoolean("isInstructionShown", false)) {
+//            showInstructionsDialog()
+//            sp.edit().putBoolean("isInstructionShown", true).commit()
+//        }
 
         // Initialize our background executor
         cameraExecutor = Executors.newSingleThreadExecutor()
@@ -243,7 +243,7 @@ class CameraFragment : Fragment() {
     private fun showInstructionsDialog() {
         val builder = AlertDialog.Builder(requireActivity())
         builder.setTitle("Camera Instructions")
-        
+
         builder.setPositiveButton("Okay") { dialogInterface, which ->
         }
         val alertDialog: AlertDialog = builder.create()

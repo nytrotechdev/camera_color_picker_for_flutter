@@ -1,8 +1,9 @@
 name: color_picker_camera
-description: A new Flutter plugin.
-version: 0.0.1
-author: Nytrotech
-homepage:
+description: As the name suggests "Color Picker Camera" lets its users to obtain the RGB(hex) color code of any object.It opens the back camera and shows color code of the object that comes in focus within the centered target.You can utilize RGB(hex) color code of object according to your need.
+
+version: 1.0.0
+
+homepage: https://github.com/nytrotechdev/camera_color_picker_for_flutter
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -12,9 +13,14 @@ dependencies:
   flutter:
     sdk: flutter
 
+  permission_handler: ^5.1.0
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  permission_handler: ^5.1.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

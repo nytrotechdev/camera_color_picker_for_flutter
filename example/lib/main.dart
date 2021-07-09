@@ -17,18 +17,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   void initState() {
-    _askCameraPermission();
     super.initState();
-  }
-
-  PermissionStatus _permissionStatus;
-
-  void _askCameraPermission() async {
-    if (await Permission.camera.request().isGranted) {
-      // ColorPickerCamera.captureColorFromCamera().then((value) => exit(0));
-    } else {
-      exit(0);
-    }
   }
 
   Color bgColor;
