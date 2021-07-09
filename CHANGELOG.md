@@ -1,3 +1,3 @@
-# 0.0.1
+# 1.0.0
 
-* Now you can get color code with just a camera click
+* Camera Permissions added in plugin
