@@ -702,37 +702,7 @@ class CameraFragment : Fragment() {
                 var green: Int = 0
                 var blue: Int = 0
 
-                val lightVibrantColor = p.getLightVibrantColor(Color.BLACK)
-                if (p.getLightVibrantColor(Color.BLACK) != Color.BLACK && p.getLightVibrantColor(Color.BLACK) != Color.TRANSPARENT) {
-                    red = lightVibrantColor.red
-                    green = lightVibrantColor.green
-                    blue = lightVibrantColor.blue
-
-                } else {
-                    if (selectedSwatch != null) {
-                        red = selectedSwatch!!.rgb.red
-                        green = selectedSwatch!!.rgb.green
-                        blue = selectedSwatch!!.rgb.blue
-
-                    } else {
-                        cvColor.setCardBackgroundColor(Color.BLACK)
-                        tvColorCode.text = "OBJECT IS TOO DARK"
-                        tvFamilyName.text = "--"
-                    }
-                }
-
-                if (red < 50 && green < 50 && blue < 50) {
-                    cvColor.setCardBackgroundColor(Color.BLACK)
-                    tvColorCode.text = "OBJECT IS TOO DARK"
-                    tvFamilyName.text = "--"
-
-                } else {
-                    cvColor.setCardBackgroundColor(Color.rgb(red, green, blue))
-                    detectedColor=String.format("#%02x%02x%02x", red, green, blue).toUpperCase()
-                    tvColorCode.text = detectedColor
-                    tvColorCode.append("\nRGB:  $red ,  $green ,  $blue")
-                    print(tvColorCode.text)
-                }
+               
 
 
                 detectColorFamily(red, green, blue)
