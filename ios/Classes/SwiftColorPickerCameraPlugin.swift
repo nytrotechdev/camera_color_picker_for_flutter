@@ -874,23 +874,7 @@ extension CameraView : AVCaptureVideoDataOutputSampleBufferDelegate , AVCaptureP
         //            im.draw(at: .zero)
         //         }
         //        self._captureOutputForVN(didOutput: sampleBuffer) // ---> CAPTURE OUTPUT FOR VISION ..
-        DispatchQueue.main.async {
-            if(self._picView != nil ){
-                self._picView.image = im
-            }
-            let color = self._exportColor(ciimage)
-            self._viewColor.layer.backgroundColor  = color?.cgColor
-            self._red   = color!.redValue
-            self._green = color!.greenValue
-            self._blue  = color!.greenValue
-            //            guard let _color = color! else {return}
-            self._labelColorCode.text = "RGB : \(Int(color!.redValue*255)),\(Int(color!.greenValue*255)),\(Int(color!.blueValue*255))"
-            
-         
-
-            self._hexColor = String(format:"%02X", Int(color!.redValue*255)) + String(format:"%02X", Int(color!.greenValue*255)) + String(format:"%02X", Int(color!.blueValue*255))
-            
-        }
+    
     }
     func _exportColor(_ image : CIImage) -> UIColor?{
         

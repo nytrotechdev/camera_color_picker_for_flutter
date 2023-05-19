@@ -42,8 +42,7 @@ class _MyAppState extends State<MyApp> {
               SizedBox(
                 height: 10,
               ),
-              RaisedButton(
-                color: Colors.red,
+              ElevatedButton(
                 onPressed: () async {
                   String colorCode =
                       await ColorPickerCamera.captureColorFromCamera;
